@@ -45,6 +45,9 @@ class _HomePageState extends State<HomePage> {
             FlatButton(
               child: Text("Click To Get Location"),
               onPressed: () {
+                if (_currentPosition != null)
+                  print("LAT: ${_currentPosition.latitude}, LNG: ${_currentPosition.longitude}");
+
                 _getCurrentLocation();
               },
             ),
